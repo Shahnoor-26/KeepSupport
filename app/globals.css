@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Common Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  ::-webkit-scrollbar-track {
+    background: #101010 ; /* Track color for dark theme */
   }
-}
+  
+  ::-webkit-scrollbar-thumb {
+    background: #020617; /* Thumb color for blue theme */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8 ; /* Darker thumb color on hover */
+  }
+  
+  /* If you have a specific dark theme class */
+  .dark-theme ::-webkit-scrollbar-track {
+    background: #101010; /* Darker track for dark theme */
+  }
+  
+  .dark-theme ::-webkit-scrollbar-thumb {
+    background: #020617; /* Thumb color for dark theme */
+  }
+  
+  .dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8 ; /* Darker thumb color on hover for dark theme */
+  }
+  
